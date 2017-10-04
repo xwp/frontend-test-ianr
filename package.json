@@ -1,0 +1,66 @@
+{
+  "name": "xwp-test",
+  "version": "1.0.0",
+  "description": "XWP Test",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp --gulpfile ./node_modules/fe-dev-lib/dist/gulpfile.js --cwd ./ --env=dev --workflow=component",
+    "prod": "gulp --gulpfile ./node_modules/fe-dev-lib/dist/gulpfile.js --cwd ./ --env=prod --workflow=component"
+  },
+  "engines": {
+    "node": ">=6.11.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:xwp/frontend-test.git"
+  },
+  "author": "",
+  "license": "GNU v3",
+  "bugs": {
+    "url": "https://github.com/xwp/frontend-test/issues"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "last 2 iOS versions",
+    "last 1 Android version",
+    "last 1 ChromeAndroid version",
+    "> 4%"
+  ],
+  "workflows": {
+    "component": {
+      "cwd": "assets",
+      "schema": "theme",
+      "tasks": {
+        "js": {
+          "entry": {
+            "main": "./main.js"
+          }
+        }
+      }
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-xwp/scss",
+    "plugins": [
+      "stylelint-no-unsupported-browser-features"
+    ],
+    "rules": {
+      "plugin/no-unsupported-browser-features": [
+        true,
+        {
+          "ignore": [
+            "outline"
+          ]
+        }
+      ]
+    }
+  },
+  "homepage": "https://github.com/xwp/frontend-test#readme",
+  "devDependencies": {
+    "fe-dev-lib": "github:xwp/fe-dev-lib",
+    "scss-query": "^1.0.1"
+  }
+}
