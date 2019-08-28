@@ -4,11 +4,11 @@
   "description": "XWP Test",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp --gulpfile ./node_modules/fe-dev-lib/dist/gulpfile.js --cwd ./ --env=dev --workflow=component",
-    "prod": "gulp --gulpfile ./node_modules/fe-dev-lib/dist/gulpfile.js --cwd ./ --env=prod --workflow=component"
+    "dev": "cross-env NODE_ENV=development gulp --gulpfile $(npm root)/undercurrent/src/index.js --cwd $(npm prefix) --workflow theme",
+    "prod": "cross-env NODE_ENV=production gulp --gulpfile $(npm root)/undercurrent/src/index.js --cwd $(npm prefix) --workflow theme"
   },
   "engines": {
-    "node": ">=6.11.x"
+    "node": ">=8.11.x"
   },
   "repository": {
     "type": "git",
@@ -20,14 +20,9 @@
     "url": "https://github.com/xwp/frontend-test/issues"
   },
   "browserslist": [
-    "last 2 Chrome versions",
-    "last 2 Firefox versions",
-    "last 2 Safari versions",
-    "last 2 Edge versions",
-    "last 2 iOS versions",
-    "last 1 Android version",
-    "last 1 ChromeAndroid version",
-    "> 4%"
+    "last 1 version",
+    "> 4%",
+    "not dead"
   ],
   "workflows": {
     "component": {
@@ -52,7 +47,13 @@
         true,
         {
           "ignore": [
-            "outline"
+            "outline",
+            "flexbox",
+            "outline",
+            "viewport-units",
+            "will-change",
+            "border-radius",
+            "css-boxshadow"
           ]
         }
       ]
@@ -60,7 +61,7 @@
   },
   "homepage": "https://github.com/xwp/frontend-test#readme",
   "devDependencies": {
-    "fe-dev-lib": "github:xwp/fe-dev-lib",
+    "undercurrent": "github:xwp/undercurrent",
     "scss-query": "^1.0.1"
   }
 }
