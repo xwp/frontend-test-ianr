@@ -7,11 +7,11 @@ Build a front-end component based on the [designs previewed here](https://scene.
 ### Design assets
 
 The .sketch source is provided inside of the designs folder.
-If you don't have the [Sketch application](https://www.sketchapp.com/), request access to the [project on Zeplin](zpl.io/2EmoJ1Y) instead. 
+If you don't have the [Sketch application](https://www.sketchapp.com/), request access to the [project on Zeplin](zpl.io/2EmoJ1Y) instead.
 
 ### Installation
 
-**The workflow requires Node >=6.11.x**
+**The workflow requires Node >=8.11.x**
 
 Install using the following command:
 
