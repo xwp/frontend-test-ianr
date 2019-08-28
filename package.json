@@ -60,7 +60,7 @@
   },
   "homepage": "https://github.com/xwp/frontend-test#readme",
   "devDependencies": {
-    "fe-dev-lib": "github:xwp/fe-dev-lib",
+    "undercurrent": "github:xwp/undercurrent",
     "scss-query": "^1.0.1"
   }
 }
