@@ -1,4 +1,3 @@
-// ----------------------------------------
 //
 // XWP Test helpers and variables.
 // No CSS outputted.
@@ -6,6 +5,7 @@
 // ----------------------------------------
 
 @import 'variables';
-@import 'typography';
 @import 'scss-query/query';
 @import 'mixins';
+@import 'background';
+@import 'padding';

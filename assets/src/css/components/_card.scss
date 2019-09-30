@@ -1,0 +1,228 @@
+// Name:            Card
+// Description:     Component to display bio of author - essentially wrapper
+//									classes to layout the card text and image elements
+//
+// Component:       `c-card`
+//
+// ========================================================================
+
+
+.c-card {
+	display: flex;
+	flex-direction: row;
+	height: 450px;
+	max-width: 1100px;
+	margin: auto;
+	padding: 39px 45px 0;
+
+	@media ( query( max, mobile ) ) {
+		flex-direction: column;
+		padding-top: 0;
+	}
+
+	@media ( query( max, desktop ) ) {
+		padding: 24px 24px 0;
+	}
+
+	&__content {
+		order: 0;
+	}
+
+	&__avatar {
+		flex: 0 0 180px;
+		font-size: 0;
+		margin: 9px 36px 0 52px;
+		order: 1;
+
+		@media ( query( max, mobile ) ) {
+			align-self: center;
+			flex-basis: 75px;
+			order: -1;
+
+			width: 75px;
+			height: 75px;
+
+			margin: 0;
+		}
+
+		@media ( query( min , mobile ) ) and ( query( max, desktop ) ) {
+			margin: 24px 36px 0 70px;
+		}
+	}
+}
+
+.c-avatar {
+	@media ( query( max, mobile ) ) {
+		background-color: lime;
+		border-radius: 50%;
+
+		object-fit: cover;
+		object-position: center;
+		overflow: hidden;
+
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.c-meta {
+	display: flex;
+	flex-direction: row;
+
+	@media ( query( max, mobile ) ) {
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	// @media ( query( max, tablet ) ) {
+	// 	align-items: center;
+	// 	flex-direction: column;
+	// }
+
+	&__title {
+		margin-right: 10px;
+
+		@media ( query( max, mobile ) ) {
+			margin: 3px 0 0;
+		}
+	}
+
+	&__social {
+		display: inherit;
+
+		@media ( query( max, mobile ) ) {
+			margin-bottom: 33px;
+		}
+	}
+}
+
+.c-social-item {
+	align-items: center;
+	background-color: $global-grey-light;
+	border-radius: 20px;
+	color: $global-text-secondary;
+	display: flex;
+	flex-direction: row;
+	font-size: 12px;
+	height: 32px;
+	transition: background-color 0.2s linear, box-shadow 0.2s linear;
+
+	&:hover {
+		background-color: $global-grey-medium;
+		box-shadow: inset -1px -1px 4px 0 #ccc;
+		text-decoration: none;
+	}
+
+	&__text {
+		padding: 0 16px 0 7px;
+
+		@media ( query( max, mobile ) ) {
+			font-family: GuardianSans-Regular, 'Helvetica Neue', sans-serif;
+			font-size: 0.875rem;
+			padding: 0 22px 0 13px;
+		}
+	}
+}
+
+.h-offset {
+	position: relative;
+
+	&--social {
+		@extend .h-offset;
+		top: 5px;
+
+		@media ( query( min , mobile ) ) and ( query( max, desktop ) ) {
+			top: 7px;
+		}
+	}
+}
+
+.c-icon {
+
+	&--facebook {
+		align-items: center;
+		background-color: $global-brand-facebook;
+		border-radius: 25px;
+		color: #fff;
+		display: flex;
+		font-size: 12px;
+		height: 25px;
+		justify-content: center;
+		margin-left: 4px;
+		width: 25px;
+	}
+
+	&--chevron {
+		font-size: 1rem;
+		margin-left: 2px;
+		position: relative;
+		top: 3px;
+	}
+
+	&--toggle {
+		align-items: center;
+		border-radius: 35px;
+		box-shadow: 0 1px 3px 0 $global-grey-dark;
+		color: $global-grey-dark;
+		display: flex;
+		font-size: 22px;
+		font-weight: 100;
+		height: 35px;
+		justify-content: center;
+		width: 35px;
+
+		&.fas {
+			padding-top: 6px;
+		}
+	}
+}
+
+.c-dropdown {
+	font-size: 0.875rem;
+	margin: 2px 0 16px;
+
+	@media ( query( max, mobile ) ) {
+		margin-bottom: 21px;
+	}
+
+	@media ( query( max, desktop ) ) {
+		margin-top: 4px;
+	}
+}
+
+.c-text {
+
+	&--heading {
+		font-size: 1.875rem;
+
+		@media ( query( max, desktop ) ) {
+			font-size: 1.9375rem;
+		}
+	}
+
+	&--body {
+		line-height: 1.125rem; // Hmm 18px then or add stylelint ignore
+
+		@media ( query( max, mobile ) ) {
+			font-size: 1.125rem;
+			line-height: 1.25rem; // Hmm 20px then
+		}
+	}
+}
+
+.c-text-container {
+	background-color: lime;
+
+	&__overlay {
+		background-color: fuchsia;
+		text-align: center;
+		width: 100%;
+		height: auto;
+
+
+		@media ( query( min, mobile ) ) {
+			display: none;
+		}
+	}
+}
