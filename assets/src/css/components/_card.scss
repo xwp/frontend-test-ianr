@@ -75,10 +75,14 @@
 		justify-content: center;
 	}
 
-	// @media ( query( max, tablet ) ) {
-	// 	align-items: center;
-	// 	flex-direction: column;
-	// }
+	@media ( query( max, tablet ) ) {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	@media ( query( min, mobile ) ) and ( max-width: 620px) {
+		background-color: blueviolet;
+	}
 
 	&__title {
 		margin-right: 10px;
