@@ -3,6 +3,13 @@
 //
 // ========================================================================
 
+a {
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 /* Navigation lists do not include a marker style */
 nav ol,
 nav ul {
