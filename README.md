@@ -107,6 +107,8 @@ Haven't used a 12 column grid as using Flexbox - would just use floats to fall b
 
 I've done no browser fall backs for IE and assumed modern browsers - normally I'd clarify this before commencing a build and deciding on layout methodology (CSS flexbox / grid vs CSS float / inline-block layouts and SCSS vs Tailwind / Bootstrap style).
 
+Only implemented a basic `srcset` in the `<img>` but with more time would've added two more images at the smaller size for the mobile view in low/hi res.
+
 #### Misc comments
 
 ##### Coding standards
@@ -137,6 +139,8 @@ Error was not picked up for missing variable in global and silent failure.
 
 Stripped back the additional common/helper SCSS but only a cursory run through.
 
+Couldn't get `query( max, 620 )` in the media queries package to work - so just used a plain CSS media query.
+
 ##### Design feedback
 
 Explain dropdown ie is it JS or just CSS hover etc
@@ -147,13 +151,9 @@ Mobile view didn't put the slight flattening under the photo bottom edge - would
 
 Assumed the mobile view Follow on FB button being same width as Mister Name is coincidence rather that used on all cards.
 
-##### Todo
-Use image srcset for different screen sizes?
-Add html comments on wrappers
-Match js-toggle and is-hidden better?
-How to deal with is/has when used as helpers in lieu of many BEM - just use h-?
-Handling of edge case between mobile / tablet around 600px
-Couldn't get query( max, 620 ) to work
+##### Edge case
+
+There was an edge case in the design between mobile / tablet views around 600px. I increased the mobile view breakpoint to 580px and adjusted the layout / image size for the 580px to tablet breakpoints. Normally would implement in discussion with designer or with context to whole site.
 
 ***
 
