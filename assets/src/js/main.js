@@ -1,7 +1,9 @@
-import { dropdown as test } from './utils/dropdown';
-import { toggleOverlay as toggleOverlay } from './utils/toggleOverlay';
+import { dropdown } from './utils/dropdown';
+import { nullLinks } from './utils/null';
+import { toggleOverlay } from './utils/toggleOverlay';
 
 ( () => {
-	test();
+	dropdown(); // Test console output
+	nullLinks(); // Disable JS on <a> links with class '.js-null'
 	toggleOverlay();
 } )();

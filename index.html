@@ -47,7 +47,7 @@
 
 							<div class="c-dropdown">
 								<a
-								 	class="c-dropdown__toggle js-dropdown-toggle"
+								 	class="c-dropdown__toggle js-dropdown-toggle js-null"
 									href="#"
 								>
 									<span class="c-dropdown__number">2</span>
@@ -66,18 +66,33 @@
 								</div>
 							</div>
 
-							<div class="c-text-container">
-								<div class="c-text c-text--body">
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-									</p>
+							<div class="c-text-container js-toggle-parent">
+								<div class="c-text-container__content js-toggle-target">
+									<div class="c-text c-text--body">
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+										</p>
+									</div>
 								</div>
-								<div class="c-text-container__overlay js-toggle-target">
-									<i class="c-icon
-														c-icon--toggle
-														js-toggle-text
-														fas
-														fa-chevron-down"></i>
+								<div class="c-text-container__overlay h-hidden--not-mobile js-toggle-shadow"></div>
+								<div class="c-text-container__trigger h-hidden--not-mobile ">
+									<a href="#"
+										class="js-toggle-text">
+										<i class="c-icon
+															c-icon--toggle
+															c-icon--offset
+															js-icon-toggle
+															fas
+															fa-chevron-down">
+										</i>
+										<i class="c-icon
+															c-icon--toggle
+															js-icon-toggle
+															fas
+															fa-chevron-up
+															is-hidden">
+										</i>
+									</a>
 								</div>
 							</div>
 
