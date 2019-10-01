@@ -1,0 +1,30 @@
+// Name:            Visibility helpers
+// Description:     Helper to provide space above container
+//
+// Component:       `h-hidden`
+//
+// ========================================================================
+
+
+/* ========================================================================
+   Component: Hidden
+ ========================================================================== */
+
+.h-hidden {
+	display: none;
+
+	&--not-mobile {
+		@media ( query( min, mobile ) ) {
+			display: inline;
+		}
+	}
+}
+
+// .h-show {
+//
+// 	&--mobile {
+// 		@media ( query( min, mobile ) ) {
+// 			display: none;
+// 		}
+// 	}
+// }
