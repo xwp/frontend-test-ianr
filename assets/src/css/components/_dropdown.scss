@@ -1,8 +1,8 @@
-// Name:            Card
-// Description:     Component to display bio of author - essentially wrapper
-//									classes to layout the card text and image elements
+// Name:            Dropdown
+// Description:     Component to contain a dropdown that pushes content down
+//									activated by JS
 //
-// Component:       `c-card`
+// Component:       `c-dropdown`
 //
 // ========================================================================
 
@@ -17,25 +17,5 @@
 
 	@media ( query( max, desktop ) ) {
 		margin-top: 4px;
-	}
-}
-
-.c-text {
-
-	&--heading {
-		font-size: 1.875rem;
-
-		@media ( query( max, desktop ) ) {
-			font-size: 1.9375rem;
-		}
-	}
-
-	&--body {
-		line-height: 1.125rem; // Hmm 18px then or add stylelint ignore
-
-		@media ( query( max, mobile ) ) {
-			font-size: 1.125rem;
-			line-height: 1.25rem; // Hmm 20px then
-		}
 	}
 }
