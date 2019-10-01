@@ -10,8 +10,6 @@ As opposed to using multiple BEM classes or the Tailwind/Bootstrap style of an e
 
 This is also informed from development experiences using ReactJS with Styled Components. However the component is written assuming that it would be included using Blade/PHP into a WordPress theme.
 
-Built desktop first.
-
 I normally use small / medium / large rather than mobile / tablet / desktop
 
 #### Build
@@ -57,7 +55,7 @@ Assumed that the card is iterated out as part of collection or listing of items.
 
 #### Third party packages
 
-FontAwesome for the Facebook icon.
+FontAwesome for the Facebook and chevron icons.
 
 Normally I'd use a basic CSS reset from [Normalize](https://github.com/) though noted the XWP reset and added some opinionated resets for lists.
 
