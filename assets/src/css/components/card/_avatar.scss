@@ -1,0 +1,21 @@
+// Name:            Card
+// Description:     Component to display bio of author - essentially wrapper
+//									classes to layout the card text and image elements
+//
+// Component:       `c-card`
+//
+// ========================================================================
+
+
+.c-avatar {
+	@media ( max-width: 580px ) {
+		border-radius: 50%;
+
+		object-fit: cover;
+		object-position: center;
+		overflow: hidden;
+
+		height: 100%;
+		width: 100%;
+	}
+}

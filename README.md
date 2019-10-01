@@ -69,6 +69,8 @@ Designer would be asked if image dimensions could be even numbers (180px width b
 
 Technique for image compression / optimisation would be needed. Product owner / account manager would be suggested that client training involve explaining when to use JPG or PNG (as well as dimensions, and whether additional image sizes are created automatically, and whether image optimisation occurs automatically or at all!).
 
+Ensure the JS element selection finds the appropriate card.
+
 #### Feedback
 
 I think all the markup in `index.html` is a bit hard to read in such a huge monolithic file. Normally I'd prefer to break up the front end HTML into component/fragment files and either include them using PHP/Blade or build using a JS framework like React/Vue. I would document the use of each component/fragment in the file header - hence no real inline HTML comments explanations.
@@ -150,6 +152,8 @@ Use image srcset for different screen sizes?
 Add html comments on wrappers
 Match js-toggle and is-hidden better?
 How to deal with is/has when used as helpers in lieu of many BEM - just use h-?
+Handling of edge case between mobile / tablet around 600px
+Couldn't get query( max, 620 ) to work
 
 ***
 

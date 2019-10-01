@@ -1,9 +1,11 @@
 //
 // XWP Test component styles.
-// No CSS outputted.
 //
 // ----------------------------------------
 
 // Card component
 
-// @import 'card/index';
+@import 'card';
+@import 'avatar';
+@import 'meta';
+@import 'text-content';

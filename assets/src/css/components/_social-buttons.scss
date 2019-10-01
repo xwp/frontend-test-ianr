@@ -1,0 +1,36 @@
+// Name:            Card
+// Description:     Component to display bio of author - essentially wrapper
+//									classes to layout the card text and image elements
+//
+// Component:       `c-card`
+//
+// ========================================================================
+
+
+.c-social-item {
+	align-items: center;
+	background-color: $global-grey-light;
+	border-radius: 20px;
+	color: $global-text-secondary;
+	display: flex;
+	flex-direction: row;
+	font-size: 12px;
+	height: 32px;
+	transition: background-color 0.2s linear, box-shadow 0.2s linear;
+
+	&:hover {
+		background-color: $global-grey-medium;
+		box-shadow: inset -1px -1px 4px 0 #ccc;
+		text-decoration: none;
+	}
+
+	&__text {
+		padding: 0 16px 0 7px;
+
+		@media ( query( max, mobile ) ) {
+			font-family: GuardianSans-Regular, 'Helvetica Neue', sans-serif;
+			font-size: 0.875rem;
+			padding: 0 22px 0 13px;
+		}
+	}
+}
