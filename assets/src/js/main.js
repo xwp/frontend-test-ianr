@@ -1,7 +1,7 @@
 import { dropdown as test } from './utils/dropdown';
-import toggleText from './utils/toggleText';
+import { toggleOverlay as toggleOverlay } from './utils/toggleOverlay';
 
 ( () => {
 	test();
-	toggleText();
+	toggleOverlay();
 } )();
