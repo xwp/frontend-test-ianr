@@ -1,15 +1,29 @@
 // Global styles
 
 /*
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in
+ * 1. Apply native system fonts.
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
 html {
-	line-height: 1.15; /* 1 */
+	font-family:
+		system-ui,
+		/* macOS 10.11-10.12 */ -apple-system,
+		/* Windows 6+ */ 'Segoe UI',
+		/* Android 4+ */ Roboto,
+		/* Ubuntu 10.10+ */ Ubuntu,
+		/* Gnome 3+ */ Cantarell,
+		/* KDE Plasma 5+ */ 'Noto Sans',
+		/* fallback */ sans-serif,
+		/* macOS emoji */ 'Apple Color Emoji',
+		/* Windows emoji */ 'Segoe UI Emoji',
+		/* Windows emoji */ 'Segoe UI Symbol',
+		/* Linux emoji */ 'Noto Color Emoji'; /* 1 */
+	line-height: 1.15; /* 2 */
 	/* stylelint-disable plugin/no-unsupported-browser-features */
-	-ms-text-size-adjust: 100%; /* 2 */
-	-webkit-text-size-adjust: 100%; /* 2 */
+	-ms-text-size-adjust: 100%; /* 3 */
+	-webkit-text-size-adjust: 100%; /* 3 */
 	/* stylelint-enable plugin/no-unsupported-browser-features */
 }
 

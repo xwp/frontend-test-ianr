@@ -1,0 +1,25 @@
+// Name:            Offset
+// Description:     Component to position an element outside it's container
+//
+// Component:       `h-offset`
+//
+// ========================================================================
+
+
+.h-offset {
+	position: relative;
+
+	&--social {
+		@extend .h-offset;
+		top: 5px;
+
+		@media ( query( min, mobile ) ) and ( query( max, tablet ) ) {
+			margin: 5px 0 10px;
+			top: unset;
+		}
+
+		@media ( query( min , tablet ) ) and ( query( max, desktop ) ) {
+			top: 7px;
+		}
+	}
+}

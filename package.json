@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development gulp --gulpfile $(npm root)/undercurrent/src/index.js --cwd $(npm prefix) --workflow theme",
-    "prod": "cross-env NODE_ENV=production gulp --gulpfile $(npm root)/undercurrent/src/index.js --cwd $(npm prefix) --workflow theme"
+    "watch": "browser-sync start --server --files \"index.html, assets/dist/*/*.*\" --browser \"safari technology preview\"",
+    "prod": "cross-env NODE_ENV=production gulp --gulpfile $(npm root)/undercurrent/src/index.js --cwd $(npm prefix) --workflow theme",
+    "prebuild": "rm -rf public",
+    "postbuild": "npm run prebuild && rsync -a -R assets/dist public && rsync -a -R  assets/images public && cp index.html public",
+    "build": "npm run prod && npm run postbuild"
   },
   "engines": {
     "node": ">=8.11.x"
@@ -61,7 +65,8 @@
   },
   "homepage": "https://github.com/xwp/frontend-test#readme",
   "devDependencies": {
-    "undercurrent": "github:xwp/undercurrent",
-    "scss-query": "^1.0.1"
+    "browser-sync": "^2.26.7",
+    "scss-query": "^1.0.1",
+    "undercurrent": "github:xwp/undercurrent"
   }
 }

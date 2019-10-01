@@ -1,0 +1,73 @@
+// Name:            Container
+// Description:     Component to align and center your site and grid content
+//
+// Component:       `l-container`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+$container-max-width: 1248px !default;
+
+$container-padding-horizontal:	50px !default;
+$container-padding-horizontal-m: 0 !default;
+$container-padding-horizontal-s: 0 !default;
+
+
+/* ========================================================================
+   Component: Container
+ ========================================================================== */
+
+/*
+ * 1. Box sizing has to be `content-box` so the max-width is always the same and
+ *    unaffected by the padding on different breakpoints. It's important for the
+ *    size modifiers.
+ *
+ * 		This has been applied globally in globals.scss
+ */
+
+.l-container {
+	box-sizing: content-box; /* 1 */
+	max-width: $container-max-width;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $container-padding-horizontal;
+	padding-right: $container-padding-horizontal;
+
+	/* Small screen, phone and smaller */
+	@media ( query( max, mobile ) ) {
+		padding-left: $container-padding-horizontal-s;
+		padding-right: $container-padding-horizontal-s;
+	}
+
+	/* Medium screen, ie phone landscape and bigger to tablet */
+	@media ( query( min, tablet ) ) {
+		padding-left: $container-padding-horizontal-m;
+		padding-right: $container-padding-horizontal-m;
+	}
+
+	/* Micro clearfix */
+	&::before,
+	&::after {
+		content: '';
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+
+	/* Remove margin from the last-child */
+	> :last-child {
+		margin-bottom: 0;
+	}
+
+	/* Remove padding from nested containers */
+	.l-container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+}

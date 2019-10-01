@@ -1,0 +1,49 @@
+// Name:            Meta
+// Description:     Component to display meta data for bio
+//									- title
+//									- social buttons
+//									- available articles to show/link out to
+//
+// Component:       `c-card`
+// Sub-component:		`c-meta`
+//
+// ========================================================================
+
+
+.c-meta {
+	display: flex;
+	flex-direction: row;
+
+	@media ( max-width: 580px ) {
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	@media ( min-width: 581px ) and ( query( max, tablet ) ) {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	&__title {
+		margin-right: 10px;
+
+		@media ( query( max, mobile ) ) {
+			margin: 3px 0 0;
+		}
+
+		// Edge case - see Readme
+		@media ( query( min, mobile ) ) and ( max-width: 640px ) {
+			line-height: 1.15;
+			margin-bottom: 9px;
+		}
+	}
+
+	&__social {
+		display: inherit;
+
+		@media ( query( max, mobile ) ) {
+			margin-bottom: 33px;
+		}
+	}
+}

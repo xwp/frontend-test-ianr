@@ -1,0 +1,23 @@
+// Name:            Reset
+// Description:     Opinionated resets/defaults for base elements
+//
+// ========================================================================
+
+a {
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+/* Navigation lists do not include a marker style */
+nav ol,
+nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+/* Removes discs from ul */
+ul {
+	list-style: none;
+}

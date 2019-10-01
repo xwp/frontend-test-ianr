@@ -1,0 +1,21 @@
+// Name:            Dropdown
+// Description:     Component to contain a dropdown that pushes content down
+//									activated by JS
+//
+// Component:       `c-dropdown`
+//
+// ========================================================================
+
+
+.c-dropdown {
+	font-size: 0.875rem;
+	margin: 2px 0 16px;
+
+	@media ( query( max, mobile ) ) {
+		margin-bottom: 21px;
+	}
+
+	@media ( query( max, desktop ) ) {
+		margin-top: 4px;
+	}
+}

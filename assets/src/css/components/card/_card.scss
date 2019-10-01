@@ -1,0 +1,59 @@
+// Name:            Card
+// Description:     Component to display bio of author - essentially wrapper
+//									classes to layout the card text and image elements
+//
+// Component:       `c-card`
+//
+// ========================================================================
+
+
+.c-card {
+	display: flex;
+	flex-direction: row;
+	min-height: 450px;
+	max-width: 1100px;
+	margin: auto;
+	padding: 39px 45px;
+
+	@media ( max-width: 580px ) {
+		flex-direction: column;
+		padding-top: 0;
+	}
+
+	@media ( query( max, desktop ) ) {
+		padding: 24px;
+	}
+
+	&__content {
+		order: 0;
+	}
+
+	&__avatar {
+		flex: 0 0 180px;
+		font-size: 0;
+		margin: 9px 36px 0 52px;
+		order: 1;
+
+		@media ( max-width: 580px ) {
+			align-self: center;
+			flex-basis: 75px;
+			order: -1;
+
+			width: 75px;
+			height: 75px;
+
+			margin: 0;
+		}
+
+		// Edge case - see Readme
+		@media ( min-width: 580px ) and ( max-width: 640px ) {
+			flex: 0 0 120px;
+			margin: 24px 24px 0 36px;
+		}
+
+		// Edge case - see Readme
+		@media ( min-width: 641px ) and ( query( max, desktop ) ) {
+			margin: 24px 36px 0 70px;
+		}
+	}
+}

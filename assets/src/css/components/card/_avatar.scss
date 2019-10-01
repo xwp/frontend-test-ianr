@@ -1,0 +1,21 @@
+// Name:            Avatar
+// Description:     Component to wrap avatar image for card
+//
+// Component:       `c-card`
+// Sub-component:		`c-avatar`
+//
+// ========================================================================
+
+
+.c-avatar {
+	@media ( max-width: 580px ) {
+		border-radius: 50%;
+
+		object-fit: cover;
+		object-position: center;
+		overflow: hidden;
+
+		height: 100%;
+		width: 100%;
+	}
+}

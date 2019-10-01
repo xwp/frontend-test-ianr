@@ -1,0 +1,27 @@
+// Name:            Text
+// Description:     Heading / body text styling
+//
+// Component:       `c-text`
+//
+// ========================================================================
+
+
+.c-text {
+
+	&--heading {
+		font-size: 1.875rem;
+
+		@media ( query( max, desktop ) ) {
+			font-size: 1.9375rem;
+		}
+	}
+
+	&--body {
+		line-height: 1.125rem; // Hmm 18px then or add stylelint ignore
+
+		@media ( query( max, mobile ) ) {
+			font-size: 1.125rem;
+			line-height: 1.25rem; // Hmm 20px then
+		}
+	}
+}
