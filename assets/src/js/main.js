@@ -1,9 +1,7 @@
-( function() {
-	// Declare
-	const toggleText = () => {};
+import { dropdown as test } from './utils/dropdown';
+import toggleText from './utils/toggleText';
 
-	// toggleText();
-
-	// eslint-disable-next-line no-console
-	console.log( 'A foo walks into a restaurant, takes a look around and says "I\'m hungry!"', toggleText() );
+( () => {
+	test();
+	toggleText();
 } )();
