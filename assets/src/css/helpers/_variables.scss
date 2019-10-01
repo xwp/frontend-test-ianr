@@ -2,9 +2,6 @@
 //
 // Variables used site-wide.
 
-// FontAwesome webfont location
-$fa-font-path: '../fonts';
-
 // Breakpoints
 // How to use corresponding mixin:
 // @media ( query( min, mobile ) ) {
@@ -29,17 +26,3 @@ $z-layers: (
 	'default': 1,
 	'depression': -100
 );
-
-// Colours
-$global-text-color: #222;
-$global-text-secondary: #232323;
-$global-link-color: #19acf0;
-$global-grey-light: #ebebeb;
-$global-grey-medium: #ddd;
-$global-grey-dark: #979797;
-$global-brand-facebook: #3a5795;
-
-// Typography styling
-$font-weight-normal: 400;
-$font-weight-bold: 700;
-$bold: $font-weight-bold; // TODO decide how to implement in global.scss
